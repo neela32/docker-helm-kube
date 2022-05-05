@@ -22,7 +22,7 @@ spec:
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
-        {{ regcred }}
+        - name: regcred
    
       serviceAccountName: {{ include "myapp.serviceAccountName" . }}
       securityContext:
