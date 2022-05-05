@@ -20,7 +20,6 @@ spec:
       labels:
         {{- include "myapp.selectorLabels" . | nindent 8 }}
     spec:
-      {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         - name: regcred
    
